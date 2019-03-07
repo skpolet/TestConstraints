@@ -1,24 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="testConstraints" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="o7d-zC-UKk"/>
+                        <viewControllerLayoutGuide type="bottom" id="qqc-uy-Q0d"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBX-Xr-PDS">
+                                <rect key="frame" x="0.0" y="896" width="768" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t26-Db-Y5S">
+                                        <rect key="frame" x="99" y="49" width="63" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="63" id="zsV-F3-xUk"/>
+                                        </constraints>
+                                        <state key="normal" title="Кнопка 1"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eM5-uI-NZ7">
+                                        <rect key="frame" x="352" y="49" width="65" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="Hze-4c-BTV"/>
+                                        </constraints>
+                                        <state key="normal" title="Кнопка 3"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyV-rW-qGL">
+                                        <rect key="frame" x="609" y="49" width="65" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="65" id="rWs-ZT-6NW"/>
+                                        </constraints>
+                                        <state key="normal" title="Кнопка 2"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="OyV-rW-qGL" secondAttribute="bottom" constant="49" id="5ru-KF-DP0"/>
+                                    <constraint firstAttribute="bottom" secondItem="eM5-uI-NZ7" secondAttribute="bottom" constant="49" id="Hqb-D2-Ogb"/>
+                                    <constraint firstItem="t26-Db-Y5S" firstAttribute="top" secondItem="zBX-Xr-PDS" secondAttribute="top" constant="49" id="asx-iR-Oea"/>
+                                    <constraint firstAttribute="bottom" secondItem="t26-Db-Y5S" secondAttribute="bottom" constant="49" id="coj-g5-JS2"/>
+                                    <constraint firstAttribute="height" constant="128" id="cr1-lt-a3G"/>
+                                    <constraint firstItem="eM5-uI-NZ7" firstAttribute="leading" secondItem="t26-Db-Y5S" secondAttribute="trailing" constant="190" id="d5f-h3-2ww"/>
+                                    <constraint firstItem="t26-Db-Y5S" firstAttribute="centerY" secondItem="zBX-Xr-PDS" secondAttribute="centerY" id="eTO-lc-Rk0"/>
+                                    <constraint firstItem="OyV-rW-qGL" firstAttribute="top" secondItem="zBX-Xr-PDS" secondAttribute="top" constant="49" id="gvg-pP-d1a"/>
+                                    <constraint firstItem="eM5-uI-NZ7" firstAttribute="centerY" secondItem="zBX-Xr-PDS" secondAttribute="centerY" id="hzT-mN-UJW"/>
+                                    <constraint firstItem="OyV-rW-qGL" firstAttribute="leading" secondItem="eM5-uI-NZ7" secondAttribute="trailing" constant="192" id="kdN-wl-Vht"/>
+                                    <constraint firstItem="eM5-uI-NZ7" firstAttribute="top" secondItem="zBX-Xr-PDS" secondAttribute="top" constant="49" id="khC-c2-m1b"/>
+                                    <constraint firstItem="t26-Db-Y5S" firstAttribute="leading" secondItem="zBX-Xr-PDS" secondAttribute="leading" constant="99" id="rLf-BQ-cMr"/>
+                                    <constraint firstItem="OyV-rW-qGL" firstAttribute="centerY" secondItem="zBX-Xr-PDS" secondAttribute="centerY" id="xBc-Pd-0kI"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zBX-Xr-PDS" secondAttribute="trailing" id="Lng-E0-EQP"/>
+                            <constraint firstItem="zBX-Xr-PDS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="TuJ-M0-QOO"/>
+                            <constraint firstItem="zBX-Xr-PDS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bIu-m0-I0B"/>
+                            <constraint firstItem="qqc-uy-Q0d" firstAttribute="top" secondItem="zBX-Xr-PDS" secondAttribute="bottom" id="fjm-gJ-6fe"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="253.90625" y="209.765625"/>
         </scene>
     </scenes>
 </document>
